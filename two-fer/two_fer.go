@@ -14,7 +14,7 @@ const MeString string = ", one for me."
 // ShareWith returns a share string
 func ShareWith(name string) string {
 	if name == "" {
-		return fmt.Sprintf("%syou%s", BaseString, MeString)
+		name = "you"
 	}
 	return fmt.Sprintf("%s%s%s", BaseString, name, MeString)
 }
