@@ -5,16 +5,10 @@ package twofer
 
 import "fmt"
 
-// BaseString : Value of base share for user
-const BaseString string = "One for "
-
-// MeString : Value for share for self
-const MeString string = ", one for me."
-
 // ShareWith returns a share string
 func ShareWith(name string) string {
 	if name == "" {
 		name = "you"
 	}
-	return fmt.Sprintf("%s%s%s", BaseString, name, MeString)
+	return fmt.Sprintf("One for %s, one for me.", name)
 }
